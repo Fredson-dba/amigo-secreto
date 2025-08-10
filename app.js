@@ -18,3 +18,15 @@ function adicionarAmigo() {
     }
 }
 
+//Implementando função para atualizar a lista de amigos na tela
+function atualizarListaDeAmigos() {
+    let listaDeamigos = document.getElementById('listaAmigos');
+    listaDeamigos.innerHTML = ''; //Limpa lista de amigos na tela
+
+//implementando loop para percorrer array amigos
+    for (let cont= 0; cont < amigos.length; cont++) {
+        let li = document.createElement ('li'); // criando elemento de lista <li> para cada nome.
+        li.textContent = amigos[cont];
+        listaDeamigos.appendChild(li); // adicionando um novo nome a lista
+    }
+}
